@@ -1,0 +1,4 @@
+IAM Role Permissions: Ensure that the IAM role associated with your AWS Lambda function has the necessary permissions to access both the source bucket (awsbuck1) and the destination bucket (awsbuck2). The role should have permissions for actions like s3:ListBucket on the source bucket and s3:PutObject on the destination bucket.
+Bucket Policy: Check the bucket policy of both awsbuck1 and awsbuck2 to ensure that they allow the necessary actions from the Lambda function. Sometimes, bucket policies can restrict access even if the IAM role has the appropriate permissions.
+Correct Bucket Names: Verify that the bucket names awsbuck1 and awsbuck2 are correct and that the Lambda function is configured to access the correct AWS region where these buckets exist.
+Lambda Execution Role: Review the execution role in the Lambda function's configuration to ensure it's the correct one that has the necessary permissions
